@@ -12,6 +12,7 @@ Source0:        https://pypi.python.org/packages/source/g/%{upstream_name}/%{ups
 BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-setuptools
+BuildRequires:  python-pbr
 Requires:       python-eventlet
 Requires:       python-cinderclient >= 1.0.6
 Requires:       python-iso8601
@@ -27,7 +28,6 @@ OpenStack image service store library
 
 %prep
 %setup -q -n %{upstream_name}-%{version}
-
 
 
 %build
