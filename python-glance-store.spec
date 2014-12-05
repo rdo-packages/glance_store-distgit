@@ -55,7 +55,7 @@ popd
 
 
 %changelog
-* Thu Dec  4 2014 hguemar <hguemar@senbonzakura> - 0.1.10-1
+* Thu Dec 04 2014 Haïkel Guémar <hguemar@fedoraproject.org> - 0.1.10-1
 - Upstream 0.1.10 (RHBZ #1169145)
 
 * Fri Sep 12 2014 Haïkel Guémar <hguemar@fedoraproject.org> - 0.1.8-1
