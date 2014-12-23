@@ -2,7 +2,7 @@
 
 Name:           python-glance-store
 Version:        0.1.10
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        OpenStack Image Service Store Library
 
 License:        ASL 2.0
@@ -20,7 +20,8 @@ Requires:       python-six
 Requires:       python-stevedore
 Requires:       python-oslo-config
 Requires:       python-oslo-i18n
-
+Requires:       python-oslo-serialization
+Requires:       python-oslo-utils
 
 %description
 OpenStack image service store library
@@ -55,6 +56,9 @@ popd
 
 
 %changelog
+* Tue Dec 23 2014 Haïkel Guémar <hguemar@fedoraproject.org> - 0.1.10-2
+- Missing requirements to python-oslo-serialization (RHBZ #1175419)
+
 * Thu Dec 04 2014 Haïkel Guémar <hguemar@fedoraproject.org> - 0.1.10-1
 - Upstream 0.1.10 (RHBZ #1169145)
 
