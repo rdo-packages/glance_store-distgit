@@ -18,10 +18,13 @@ Requires:       python-cinderclient >= 1.0.6
 Requires:       python-iso8601
 Requires:       python-six
 Requires:       python-stevedore
+Requires:       python-oslo-concurrency
 Requires:       python-oslo-config
 Requires:       python-oslo-i18n
-Requires:       python-oslo-utils
 Requires:       python-oslo-serialization
+Requires:       python-oslo-utils
+Requires:       python-enum34
+Requires:       python-jsonschema
 
 
 %description
