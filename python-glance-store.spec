@@ -4,7 +4,7 @@
 
 Name:           python-glance-store
 Version:        0.4.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        OpenStack Image Service Store Library
 
 License:        ASL 2.0
@@ -54,6 +54,9 @@ OpenStack image service store library
 
 
 %changelog
+* Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.4.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
+
 * Tue Dec 23 2014 Haïkel Guémar <hguemar@fedoraproject.org> - 0.1.10-2
 - Missing requirements to python-oslo-serialization (RHBZ #1175419)
 
