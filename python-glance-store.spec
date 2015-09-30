@@ -3,8 +3,8 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           python-glance-store
-Version:        0.4.0
-Release:        2%{?dist}
+Version:        0.9.1
+Release:        1%{?dist}
 Summary:        OpenStack Image Service Store Library
 
 License:        ASL 2.0
@@ -18,7 +18,7 @@ BuildRequires:  python-pbr
 Requires:       python-eventlet
 Requires:       python-cinderclient >= 1.0.6
 Requires:       python-iso8601
-Requires:       python-six
+Requires:       python-six >= 1.9.0
 Requires:       python-stevedore
 Requires:       python-oslo-concurrency
 Requires:       python-oslo-config
@@ -54,6 +54,9 @@ OpenStack image service store library
 
 
 %changelog
+* Wed Sep 30 2015 Haikel Guemar <hguemar@fedoraproject.org> - 0.9.1-1
+- Update to upstream 0.9.1
+
 * Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.4.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
