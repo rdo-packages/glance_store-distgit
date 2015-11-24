@@ -43,12 +43,6 @@ rm -rf %{upstream_name}.egg-info
 
 %install
 %{__python2} setup.py install -O1 --skip-build --root %{buildroot}
-# Remove spurious shebang in module without changing timestamp
-pushd %{buildroot}%{python_sitelib}/%{upstream_name}/common/
-sed 1,2d config.py > config.py.new
-touch -r config.py config.py.new
-mv config.py.new config.py
-popd
 
 
 %files
