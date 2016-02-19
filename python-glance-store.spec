@@ -2,7 +2,7 @@
 
 Name:           python-glance-store
 Version:        XXX
-Release:        XXX{?dist}
+Release:        XXX
 Summary:        OpenStack Image Service Store Library
 
 License:        ASL 2.0
