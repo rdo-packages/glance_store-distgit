@@ -2,7 +2,7 @@
 
 Name:           python-glance-store
 Version:        XXX
-Release:        XXX{?dist}
+Release:        XXX
 Summary:        OpenStack Image Service Store Library
 
 License:        ASL 2.0
@@ -13,16 +13,20 @@ BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-setuptools
 BuildRequires:  python-pbr
+Requires:       python-debtcollector >= 1.2.0
 Requires:       python-eventlet
 Requires:       python-cinderclient >= 1.0.6
+Requires:       python-keystoneclient >= 1.6.0
 Requires:       python-iso8601
-Requires:       python-six
-Requires:       python-stevedore
-Requires:       python-oslo-concurrency
-Requires:       python-oslo-config
-Requires:       python-oslo-i18n
-Requires:       python-oslo-serialization
-Requires:       python-oslo-utils
+Requires:       python-requests
+Requires:       python-six >= 1.9.0
+Requires:       python-stevedore >= 1.5.0
+Requires:       python-oslo-concurrency >= 3.5.0
+Requires:       python-oslo-config >= 3.7.0
+Requires:       python-oslo-i18n >= 2.1.0
+Requires:       python-oslo-rootwrap
+Requires:       python-oslo-serialization >= 1.10.0
+Requires:       python-oslo-utils >= 3.5.0
 Requires:       python-enum34
 Requires:       python-jsonschema
 
@@ -49,6 +53,7 @@ rm -rf %{upstream_name}.egg-info
 %doc AUTHORS ChangeLog
 %{!?_licensedir:%global license %%doc}
 %license LICENSE
+%{_bindir}/glance-rootwrap
 %{python2_sitelib}/%{upstream_name}
 %{python2_sitelib}/%{upstream_name}-*.egg-info
 
