@@ -1,8 +1,10 @@
 %global upstream_name glance_store
 
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+
 Name:           python-glance-store
-Version:        XXX
-Release:        XXX
+Version:        0.13.0
+Release:        1%{?dist}
 Summary:        OpenStack Image Service Store Library
 
 License:        ASL 2.0
@@ -59,5 +61,8 @@ rm -rf %{upstream_name}.egg-info
 
 
 %changelog
+* Wed Mar 23 2016 Haikel Guemar <hguemar@fedoraproject.org> 0.13.0-
+- Update to 0.13.0
+
 * Fri Sep 12 2014 Haïkel Guémar <hguemar@fedoraproject.org> - 0.1.8-1
 - Initial package
