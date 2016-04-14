@@ -1,5 +1,5 @@
 # UUID                                  	Group Name
 #
-90706e562542700d44240e5b7d4bc80a6d232abc	glance_store-distgit-core
+90706e562542700d44240e5b7d4bc80a6d232abc	openstack/glance_store-distgit-core
 f3087df010ba7d2f1a40dfe475c6fddf35e80c41	openstack/glance_store-distgit-ptl
 global:Registered-Users                 	Registered Users
