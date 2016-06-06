@@ -59,5 +59,3 @@ rm -rf %{upstream_name}.egg-info
 
 
 %changelog
-* Fri Sep 12 2014 Haïkel Guémar <hguemar@fedoraproject.org> - 0.1.8-1
-- Initial package
