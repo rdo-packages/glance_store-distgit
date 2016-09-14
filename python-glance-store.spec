@@ -1,3 +1,4 @@
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global upstream_name glance_store
 
 Name:           python-glance-store
@@ -7,7 +8,7 @@ Summary:        OpenStack Image Service Store Library
 
 License:        ASL 2.0
 URL:            https://github.com/openstack/%{upstream_name}
-Source0:        https://tarballs.openstack.org/%{upstream_name}/%{upstream_name}-%{version}.tar.gz
+Source0:        https://tarballs.openstack.org/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  python2-devel
