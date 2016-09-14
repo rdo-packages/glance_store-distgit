@@ -17,17 +17,17 @@ BuildRequires:  python-pbr
 Requires:       python-debtcollector >= 1.2.0
 Requires:       python-eventlet
 Requires:       python-cinderclient >= 1.0.6
-Requires:       python-keystoneclient >= 1.6.0
+Requires:       python-keystoneclient >= 2.0.0
 Requires:       python-iso8601
 Requires:       python-requests
 Requires:       python-six >= 1.9.0
-Requires:       python-stevedore >= 1.5.0
-Requires:       python-oslo-concurrency >= 3.5.0
-Requires:       python-oslo-config >= 3.7.0
+Requires:       python-stevedore >= 1.16.0
+Requires:       python-oslo-concurrency >= 3.8.0
+Requires:       python-oslo-config >= 2:3.14.0
 Requires:       python-oslo-i18n >= 2.1.0
 Requires:       python-oslo-rootwrap
 Requires:       python-oslo-serialization >= 1.10.0
-Requires:       python-oslo-utils >= 3.5.0
+Requires:       python-oslo-utils >= 3.16.0
 Requires:       python-enum34
 Requires:       python-jsonschema
 
