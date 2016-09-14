@@ -3,7 +3,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           python-glance-store
-Version:        0.13.0
+Version:        0.13.1
 Release:        1%{?dist}
 Summary:        OpenStack Image Service Store Library
 
@@ -61,6 +61,9 @@ rm -rf %{upstream_name}.egg-info
 
 
 %changelog
+* Wed Sep 14 2016 Haikel Guemar <hguemar@fedoraproject.org> 0.13.1-1
+- Update to 0.13.1
+
 * Wed Mar 23 2016 Haikel Guemar <hguemar@fedoraproject.org> 0.13.0-
 - Update to 0.13.0
 
