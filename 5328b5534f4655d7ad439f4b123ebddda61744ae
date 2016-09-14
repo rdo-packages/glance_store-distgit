@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_1d20c4f6",
+        "filename": "python-glance-store.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2016-09-14T14:12:07Z",
+      "side": 1,
+      "message": "Wouldn\u0027t we want to have %{upstream_version} here as well?",
+      "range": {
+        "startLine": 11,
+        "startChar": 80,
+        "endLine": 11,
+        "endChar": 90
+      },
+      "revId": "5328b5534f4655d7ad439f4b123ebddda61744ae",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
