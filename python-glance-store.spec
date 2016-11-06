@@ -1,9 +1,13 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global upstream_name glance_store
 
+%if 0%{?fedora}
+%global with_python3 1
+%endif
+
 Name:           python-glance-store
 Version:        0.18.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        OpenStack Image Service Store Library
 
 License:        ASL 2.0
@@ -11,6 +15,13 @@ URL:            https://github.com/openstack/%{upstream_name}
 Source0:        https://tarballs.openstack.org/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildArch:      noarch
+
+%description
+OpenStack image service store library
+
+
+%package -n python2-glance-store
+Summary:    %{summary}
 BuildRequires:  python2-devel
 BuildRequires:  python-setuptools
 BuildRequires:  python-pbr
@@ -30,36 +41,85 @@ Requires:       python-oslo-serialization >= 1.10.0
 Requires:       python-oslo-utils >= 3.16.0
 Requires:       python-enum34
 Requires:       python-jsonschema
+%{?python_provide:%python_provide python2-glance-store}
+
+%description -n python2-glance-store
+%{description}
 
 
-%description
-OpenStack image service store library
+%if 0%{?with_python3}
+%package -n python3-glance-store
+Summary:    %{summary}
+BuildRequires:  python3-devel
+BuildRequires:  python3-setuptools
+BuildRequires:  python3-pbr
+Requires:       python3-debtcollector >= 1.2.0
+Requires:       python3-eventlet
+Requires:       python3-cinderclient >= 1.0.6
+Requires:       python3-keystoneclient >= 2.0.0
+Requires:       python3-iso8601
+Requires:       python3-requests
+Requires:       python3-six >= 1.9.0
+Requires:       python3-stevedore >= 1.16.0
+Requires:       python3-oslo-concurrency >= 3.8.0
+Requires:       python3-oslo-config >= 2:3.14.0
+Requires:       python3-oslo-i18n >= 2.1.0
+Requires:       python3-oslo-rootwrap
+Requires:       python3-oslo-serialization >= 1.10.0
+Requires:       python3-oslo-utils >= 3.16.0
+Requires:       python3-enum34
+Requires:       python3-jsonschema
+%{?python_provide:%python_provide python3-glance-store}
 
+%description -n python3-glance-store
+%{description}
+%endif
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 
 %build
-%{__python2} setup.py build
-# Remove bundle egg-info
-rm -rf %{upstream_name}.egg-info
+%py2_build
+%if 0%{?with_python3}
+%py3_build
+%endif
 
 
 %install
-%{__python2} setup.py install -O1 --skip-build --root %{buildroot}
+%if 0%{?with_python3}
+%py3_install
+mv %{buildroot}%{_bindir}/glance-rootwrap %{buildroot}%{_bindir}/glance-rootwrap-%{python3_version}
+ln -s ./glance-rootwrap-%{python3_version} %{buildroot}%{_bindir}/glance-rootwrap-3
+%endif
+
+%py2_install
+mv %{buildroot}%{_bindir}/glance-rootwrap %{buildroot}%{_bindir}/glance-rootwrap-%{python2_version}
+ln -s ./glance-rootwrap-%{python2_version} %{buildroot}%{_bindir}/glance-rootwrap-2
+ln -s ./glance-rootwrap-%{python2_version} %{buildroot}%{_bindir}/glance-rootwrap
 
 
-%files
+%files -n python2-glance-store
 %doc AUTHORS ChangeLog
-%{!?_licensedir:%global license %%doc}
 %license LICENSE
 %{_bindir}/glance-rootwrap
+%{_bindir}/glance-rootwrap-2*
 %{python2_sitelib}/%{upstream_name}
 %{python2_sitelib}/%{upstream_name}-*.egg-info
 
+%if 0%{?with_python3}
+%files -n python3-glance-store
+%doc AUTHORS ChangeLog
+%license LICENSE
+%{_bindir}/glance-rootwrap-3*
+%{python2_sitelib}/%{upstream_name}
+%{python2_sitelib}/%{upstream_name}-*.egg-info
+%endif
 
 %changelog
+* Wed Nov  9 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 0.18.0-2
+- Add python3 subpackage
+
 * Wed Sep 14 2016 Haikel Guemar <hguemar@fedoraproject.org> 0.18.0-1
 - Update to 0.18.0
 
