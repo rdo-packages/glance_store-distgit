@@ -27,7 +27,7 @@ BuildRequires:  python-setuptools
 BuildRequires:  python-pbr
 Requires:       python-debtcollector >= 1.2.0
 Requires:       python-eventlet
-Requires:       python-cinderclient >= 1.0.6
+Requires:       python-cinderclient >= 1.6.0
 Requires:       python-keystoneclient >= 2.0.0
 Requires:       python-iso8601
 Requires:       python-requests
@@ -41,6 +41,7 @@ Requires:       python-oslo-serialization >= 1.10.0
 Requires:       python-oslo-utils >= 3.16.0
 Requires:       python-enum34
 Requires:       python-jsonschema
+Requires:       python-os-brick >= 1.8.0
 %{?python_provide:%python_provide python2-glance-store}
 
 %description -n python2-glance-store
@@ -55,7 +56,7 @@ BuildRequires:  python3-setuptools
 BuildRequires:  python3-pbr
 Requires:       python3-debtcollector >= 1.2.0
 Requires:       python3-eventlet
-Requires:       python3-cinderclient >= 1.0.6
+Requires:       python3-cinderclient >= 1.6.0
 Requires:       python3-keystoneclient >= 2.0.0
 Requires:       python3-iso8601
 Requires:       python3-requests
