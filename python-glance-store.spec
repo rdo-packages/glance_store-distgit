@@ -114,8 +114,8 @@ ln -s ./glance-rootwrap-%{python2_version} %{buildroot}%{_bindir}/glance-rootwra
 %doc AUTHORS ChangeLog
 %license LICENSE
 %{_bindir}/glance-rootwrap-3*
-%{python2_sitelib}/%{upstream_name}
-%{python2_sitelib}/%{upstream_name}-*.egg-info
+%{python3_sitelib}/%{upstream_name}
+%{python3_sitelib}/%{upstream_name}-*.egg-info
 %endif
 
 %changelog
