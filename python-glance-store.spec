@@ -6,8 +6,8 @@
 %endif
 
 Name:           python-glance-store
-Version:        XXX
-Release:        XXX
+Version:        0.20.0
+Release:        1%{?dist}
 Summary:        OpenStack Image Service Store Library
 
 License:        ASL 2.0
@@ -121,3 +121,6 @@ ln -s ./glance-rootwrap-%{python2_version} %{buildroot}%{_bindir}/glance-rootwra
 %endif
 
 %changelog
+* Thu Feb 09 2017 Alfredo Moralejo <amoralej@redhat.com> 0.20.0-1
+- Update to 0.20.0
+
