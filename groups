@@ -1,6 +1,9 @@
-# UUID                                  	Group Name
-#
-63673ea7f2ae6a5666566b1ea9f14e473d00f5a9	rdo-core
-90706e562542700d44240e5b7d4bc80a6d232abc	openstack/glance_store-distgit-core
-f3087df010ba7d2f1a40dfe475c6fddf35e80c41	openstack/glance_store-distgit-ptl
-global:Registered-Users                 	Registered Users
+# UUID Group Name
+global:Registered-Users	Registered Users
+4572c517702492251ad622a289176552a8acbbb2	rdo-superusers
+global:Anonymous-Users	Anonymous Users
+05a678d3d4a168e149d5e8a0063bbd1b1c5526da	Administrators
+401cf37bee35d1c809d4d957e55f2a304f8eed69	rdo-provenpackagers
+e5a15f6a7047a52f115cab6e55a4dd48a705ee74	openstack/glance_store-core
+6ddfecad023c6f4fa3ac8c4d2583c502ea675a73	Non-Interactive Users
+ad9512e18184c5260db9b9609fbcaf656d232faf	openstack/glance_store-ptl
