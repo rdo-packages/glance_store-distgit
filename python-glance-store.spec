@@ -27,7 +27,7 @@ BuildRequires:  python-setuptools
 BuildRequires:  python-pbr
 Requires:       python-debtcollector >= 1.2.0
 Requires:       python-eventlet
-Requires:       python-cinderclient >= 1.6.0
+Requires:       python-cinderclient >= 2.0.1
 Requires:       python-keystoneauth1 >= 2.17.0
 Requires:       python-keystoneclient >= 1:3.8.0
 Requires:       python-iso8601
@@ -42,7 +42,8 @@ Requires:       python-oslo-serialization >= 1.10.0
 Requires:       python-oslo-utils >= 3.18.0
 Requires:       python-enum34
 Requires:       python-jsonschema
-Requires:       python-os-brick >= 1.8.0
+Requires:       python-os-brick >= 1.11.0
+Requires:       python-oslo-privsep >= 1.9.0
 %{?python_provide:%python_provide python2-glance-store}
 
 %description -n python2-glance-store
@@ -57,7 +58,7 @@ BuildRequires:  python3-setuptools
 BuildRequires:  python3-pbr
 Requires:       python3-debtcollector >= 1.2.0
 Requires:       python3-eventlet
-Requires:       python3-cinderclient >= 1.6.0
+Requires:       python3-cinderclient >= 2.0.1
 Requires:       python3-keystoneauth1 >= 2.17.0
 Requires:       python3-keystoneclient >= 1:3.8.0
 Requires:       python3-iso8601
@@ -72,7 +73,8 @@ Requires:       python3-oslo-serialization >= 1.10.0
 Requires:       python3-oslo-utils >= 3.18.0
 Requires:       python3-enum34
 Requires:       python3-jsonschema
-Requires:       python3-os-brick >= 1.8.0
+Requires:       python3-os-brick >= 1.11.0
+Requires:       python3-oslo-privsep >= 1.9.0
 %{?python_provide:%python_provide python3-glance-store}
 
 %description -n python3-glance-store
