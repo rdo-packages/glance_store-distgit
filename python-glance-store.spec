@@ -104,6 +104,7 @@ mv %{buildroot}%{_bindir}/glance-rootwrap %{buildroot}%{_bindir}/glance-rootwrap
 ln -s ./glance-rootwrap-%{python2_version} %{buildroot}%{_bindir}/glance-rootwrap-2
 ln -s ./glance-rootwrap-%{python2_version} %{buildroot}%{_bindir}/glance-rootwrap
 
+install -p -D -m 755 etc/glance/rootwrap.d/glance_cinder_store.filters %{buildroot}%{_datarootdir}/%{upstream_name}/glance_cinder_store.filters
 
 %files -n python2-glance-store
 %doc AUTHORS ChangeLog
