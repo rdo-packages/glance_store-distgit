@@ -104,12 +104,15 @@ mv %{buildroot}%{_bindir}/glance-rootwrap %{buildroot}%{_bindir}/glance-rootwrap
 ln -s ./glance-rootwrap-%{python2_version} %{buildroot}%{_bindir}/glance-rootwrap-2
 ln -s ./glance-rootwrap-%{python2_version} %{buildroot}%{_bindir}/glance-rootwrap
 
+install -p -D -m 755 etc/glance/rootwrap.d/glance_cinder_store.filters %{buildroot}%{_datarootdir}/%{upstream_name}/glance_cinder_store.filters
 
 %files -n python2-glance-store
 %doc AUTHORS ChangeLog
 %license LICENSE
 %{_bindir}/glance-rootwrap
 %{_bindir}/glance-rootwrap-2*
+%{_datarootdir}/%{upstream_name}
+%{_datarootdir}/%{upstream_name}/*.filters
 %{python2_sitelib}/%{upstream_name}
 %{python2_sitelib}/%{upstream_name}-*.egg-info
 
@@ -118,6 +121,8 @@ ln -s ./glance-rootwrap-%{python2_version} %{buildroot}%{_bindir}/glance-rootwra
 %doc AUTHORS ChangeLog
 %license LICENSE
 %{_bindir}/glance-rootwrap-3*
+%{_datarootdir}/%{upstream_name}
+%{_datarootdir}/%{upstream_name}/*.filters
 %{python3_sitelib}/%{upstream_name}
 %{python3_sitelib}/%{upstream_name}-*.egg-info
 %endif
