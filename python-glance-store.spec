@@ -6,8 +6,8 @@
 %endif
 
 Name:           python-glance-store
-Version:        XXX
-Release:        XXX
+Version:        0.22.0
+Release:        1%{?dist}
 Summary:        OpenStack Image Service Store Library
 
 License:        ASL 2.0
@@ -128,3 +128,6 @@ install -p -D -m 644 etc/glance/rootwrap.d/glance_cinder_store.filters %{buildro
 %endif
 
 %changelog
+* Mon Aug 21 2017 Alfredo Moralejo <amoralej@redhat.com> 0.22.0-1
+- Update to 0.22.0
+
