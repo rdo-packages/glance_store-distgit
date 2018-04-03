@@ -129,3 +129,4 @@ install -p -D -m 644 etc/glance/rootwrap.d/glance_cinder_store.filters %{buildro
 %endif
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/glance_store/commit/?id=6d97ea212b689348baaa59ae3677ce4f65cb58f4
