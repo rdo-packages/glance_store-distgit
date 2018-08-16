@@ -27,13 +27,13 @@ BuildRequires:  python2-setuptools
 BuildRequires:  python2-pbr
 Requires:       python2-eventlet
 Requires:       python2-cinderclient >= 2.0.1
-Requires:       python2-keystoneauth1 >= 3.3.0
+Requires:       python2-keystoneauth1 >= 3.4.0
 Requires:       python2-keystoneclient >= 1:3.8.0
 Requires:       python2-requests
 Requires:       python2-six >= 1.10.0
 Requires:       python2-stevedore >= 1.20.0
-Requires:       python2-oslo-concurrency >= 3.25.0
-Requires:       python2-oslo-config >= 2:5.1.0
+Requires:       python2-oslo-concurrency >= 3.26.0
+Requires:       python2-oslo-config >= 2:5.2.0
 Requires:       python2-oslo-i18n >= 3.15.3
 Requires:       python2-oslo-rootwrap
 Requires:       python2-oslo-serialization >= 2.18.0
@@ -61,13 +61,13 @@ BuildRequires:  python3-setuptools
 BuildRequires:  python3-pbr
 Requires:       python3-eventlet
 Requires:       python3-cinderclient >= 2.0.1
-Requires:       python3-keystoneauth1 >= 3.3.0
+Requires:       python3-keystoneauth1 >= 3.4.0
 Requires:       python3-keystoneclient >= 1:3.8.0
 Requires:       python3-requests
 Requires:       python3-six >= 1.10.0
 Requires:       python3-stevedore >= 1.20.0
-Requires:       python3-oslo-concurrency >= 3.25.0
-Requires:       python3-oslo-config >= 2:5.1.0
+Requires:       python3-oslo-concurrency >= 3.26.0
+Requires:       python3-oslo-config >= 2:5.2.0
 Requires:       python3-oslo-i18n >= 3.15.3
 Requires:       python3-oslo-rootwrap
 Requires:       python3-oslo-serialization >= 2.18.0
