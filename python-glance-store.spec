@@ -61,7 +61,7 @@ Requires:       python%{pyver}-jsonschema
 %{description}
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%autosetup -S git -n %{upstream_name}-%{upstream_version}
 
 %build
 %{pyver_build}
