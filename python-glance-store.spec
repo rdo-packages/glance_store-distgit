@@ -23,6 +23,7 @@ URL:            https://github.com/openstack/%{upstream_name}
 Source0:        https://tarballs.openstack.org/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildArch:      noarch
+BuildRequires:  git
 
 %description
 OpenStack image service store library
@@ -61,7 +62,7 @@ Requires:       python%{pyver}-jsonschema
 %{description}
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%autosetup -S git -n %{upstream_name}-%{upstream_version}
 
 %build
 %{pyver_build}
