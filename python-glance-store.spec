@@ -15,12 +15,13 @@
 
 Name:           python-glance-store
 Version:        0.28.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        OpenStack Image Service Store Library
 
 License:        ASL 2.0
 URL:            https://github.com/openstack/%{upstream_name}
 Source0:        https://tarballs.openstack.org/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
+Patch001:       0001-Do-not-include-ETag-when-puting-manifest-in-chunked.patch
 
 BuildArch:      noarch
 BuildRequires:  git
@@ -86,6 +87,9 @@ install -p -D -m 644 etc/glance/rootwrap.d/glance_cinder_store.filters %{buildro
 %{pyver_sitelib}/%{upstream_name}-*.egg-info
 
 %changelog
+* Tue Apr 23 2019 Alfredo Moralejo <amoralej@redhat.com> 0.28.0-2
+- Do not include ETag when puting manifest in chunked uploads. Required for Ceph RadosGW Nautilus as backend.
+
 * Fri Mar 22 2019 RDO <dev@lists.rdoproject.org> 0.28.0-1
 - Update to 0.28.0
 
