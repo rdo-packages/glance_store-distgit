@@ -93,3 +93,4 @@ install -p -D -m 644 etc/glance/rootwrap.d/glance_cinder_store.filters %{buildro
 * Fri Mar 22 2019 RDO <dev@lists.rdoproject.org> 0.28.0-1
 - Update to 0.28.0
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/glance_store/commit/?id=ff53fe3b96b9273a4d426df6b8e634d4b89e88cf
