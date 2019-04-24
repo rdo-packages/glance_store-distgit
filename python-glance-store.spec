@@ -21,7 +21,6 @@ Summary:        OpenStack Image Service Store Library
 License:        ASL 2.0
 URL:            https://github.com/openstack/%{upstream_name}
 Source0:        https://tarballs.openstack.org/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
-Patch001:       0001-Do-not-include-ETag-when-puting-manifest-in-chunked.patch
 
 BuildArch:      noarch
 BuildRequires:  git
