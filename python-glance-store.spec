@@ -12,6 +12,7 @@
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global upstream_name glance_store
+%global pkg_name glance-store
 
 Name:           python-glance-store
 Version:        XXX
@@ -29,7 +30,7 @@ BuildRequires:  git
 OpenStack image service store library
 
 
-%package -n python%{pyver}-glance-store
+%package -n python%{pyver}-%{pkg_name}
 Summary:    %{summary}
 BuildRequires:  python%{pyver}-devel
 BuildRequires:  python%{pyver}-setuptools
@@ -56,9 +57,9 @@ Requires:       python-jsonschema
 %else
 Requires:       python%{pyver}-jsonschema
 %endif
-%{?python_provide:%python_provide python%{pyver}-glance-store}
+%{?python_provide:%python_provide python%{pyver}-%{pkg_name}}
 
-%description -n python%{pyver}-glance-store
+%description -n python%{pyver}-%{pkg_name}
 %{description}
 
 %prep
@@ -75,7 +76,7 @@ ln -s ./glance-rootwrap %{buildroot}%{_bindir}/glance-rootwrap-%{pyver}
 
 install -p -D -m 644 etc/glance/rootwrap.d/glance_cinder_store.filters %{buildroot}%{_datarootdir}/%{upstream_name}/glance_cinder_store.filters
 
-%files -n python%{pyver}-glance-store
+%files -n python%{pyver}-%{pkg_name}
 %doc AUTHORS ChangeLog
 %license LICENSE
 %{_bindir}/glance-rootwrap
