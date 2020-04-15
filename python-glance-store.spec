@@ -1,14 +1,3 @@
-# Macros for py2/py3 compatibility
-%if 0%{?fedora} || 0%{?rhel} > 7
-%global pyver %{python3_pkgversion}
-%else
-%global pyver 2
-%endif
-%global pyver_bin python%{pyver}
-%global pyver_sitelib %python%{pyver}_sitelib
-%global pyver_install %py%{pyver}_install
-%global pyver_build %py%{pyver}_build
-# End of macros for py2/py3 compatibility
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global upstream_name glance_store
@@ -30,60 +19,54 @@ BuildRequires:  git
 OpenStack image service store library
 
 
-%package -n python%{pyver}-%{pkg_name}
+%package -n python3-%{pkg_name}
 Summary:    %{summary}
-BuildRequires:  python%{pyver}-devel
-BuildRequires:  python%{pyver}-setuptools
-BuildRequires:  python%{pyver}-pbr
-Requires:       python%{pyver}-eventlet
-Requires:       python%{pyver}-cinderclient >= 2.0.1
-Requires:       python%{pyver}-keystoneauth1 >= 3.4.0
-Requires:       python%{pyver}-keystoneclient >= 1:3.8.0
-Requires:       python%{pyver}-requests
-Requires:       python%{pyver}-six >= 1.10.0
-Requires:       python%{pyver}-stevedore >= 1.20.0
-Requires:       python%{pyver}-oslo-concurrency >= 3.26.0
-Requires:       python%{pyver}-oslo-config >= 2:5.2.0
-Requires:       python%{pyver}-oslo-i18n >= 3.15.3
-Requires:       python%{pyver}-oslo-rootwrap
-Requires:       python%{pyver}-oslo-serialization >= 2.18.0
-Requires:       python%{pyver}-oslo-utils >= 3.33.0
-Requires:       python%{pyver}-os-brick >= 1.11.0
-Requires:       python%{pyver}-oslo-privsep >= 1.23.0
-# Handle python2 exception
-%if %{pyver} == 2
-Requires:       python-enum34
-Requires:       python-jsonschema
-%else
-Requires:       python%{pyver}-jsonschema
-%endif
-%{?python_provide:%python_provide python%{pyver}-%{pkg_name}}
+BuildRequires:  python3-devel
+BuildRequires:  python3-setuptools
+BuildRequires:  python3-pbr
+Requires:       python3-eventlet
+Requires:       python3-cinderclient >= 2.0.1
+Requires:       python3-keystoneauth1 >= 3.4.0
+Requires:       python3-keystoneclient >= 1:3.8.0
+Requires:       python3-requests
+Requires:       python3-six >= 1.10.0
+Requires:       python3-stevedore >= 1.20.0
+Requires:       python3-oslo-concurrency >= 3.26.0
+Requires:       python3-oslo-config >= 2:5.2.0
+Requires:       python3-oslo-i18n >= 3.15.3
+Requires:       python3-oslo-rootwrap
+Requires:       python3-oslo-serialization >= 2.18.0
+Requires:       python3-oslo-utils >= 3.33.0
+Requires:       python3-os-brick >= 1.11.0
+Requires:       python3-oslo-privsep >= 1.23.0
+Requires:       python3-jsonschema
+%{?python_provide:%python_provide python3-%{pkg_name}}
 
-%description -n python%{pyver}-%{pkg_name}
+%description -n python3-%{pkg_name}
 %{description}
 
 %prep
 %autosetup -S git -n %{upstream_name}-%{upstream_version}
 
 %build
-%{pyver_build}
+%{py3_build}
 
 %install
-%{pyver_install}
+%{py3_install}
 
 # Create a versioned binary for backwards compatibility until everything is pure py3
-ln -s ./glance-rootwrap %{buildroot}%{_bindir}/glance-rootwrap-%{pyver}
+ln -s ./glance-rootwrap %{buildroot}%{_bindir}/glance-rootwrap-3
 
 install -p -D -m 644 etc/glance/rootwrap.d/glance_cinder_store.filters %{buildroot}%{_datarootdir}/%{upstream_name}/glance_cinder_store.filters
 
-%files -n python%{pyver}-%{pkg_name}
+%files -n python3-%{pkg_name}
 %doc AUTHORS ChangeLog
 %license LICENSE
 %{_bindir}/glance-rootwrap
-%{_bindir}/glance-rootwrap-%{pyver}
+%{_bindir}/glance-rootwrap-3
 %{_datarootdir}/%{upstream_name}
 %{_datarootdir}/%{upstream_name}/*.filters
-%{pyver_sitelib}/%{upstream_name}
-%{pyver_sitelib}/%{upstream_name}-*.egg-info
+%{python3_sitelib}/%{upstream_name}
+%{python3_sitelib}/%{upstream_name}-*.egg-info
 
 %changelog
