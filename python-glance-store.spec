@@ -25,7 +25,7 @@ BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-pbr
 Requires:       python3-eventlet
-Requires:       python3-cinderclient >= 2.0.1
+Requires:       python3-cinderclient >= 4.1.0
 Requires:       python3-keystoneauth1 >= 3.4.0
 Requires:       python3-keystoneclient >= 1:3.8.0
 Requires:       python3-requests
@@ -37,7 +37,7 @@ Requires:       python3-oslo-i18n >= 3.15.3
 Requires:       python3-oslo-rootwrap
 Requires:       python3-oslo-serialization >= 2.18.0
 Requires:       python3-oslo-utils >= 3.33.0
-Requires:       python3-os-brick >= 1.11.0
+Requires:       python3-os-brick >= 2.6.0
 Requires:       python3-oslo-privsep >= 1.23.0
 Requires:       python3-jsonschema
 %{?python_provide:%python_provide python3-%{pkg_name}}
