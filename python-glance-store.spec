@@ -70,3 +70,4 @@ install -p -D -m 644 etc/glance/rootwrap.d/glance_cinder_store.filters %{buildro
 %{python3_sitelib}/%{upstream_name}-*.egg-info
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/glance_store/commit/?id=3b71ce2d476a9fc4fa86091711d0b8ca1dff8868
