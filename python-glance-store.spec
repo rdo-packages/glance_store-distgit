@@ -59,6 +59,8 @@ ln -s ./glance-rootwrap %{buildroot}%{_bindir}/glance-rootwrap-3
 
 install -p -D -m 644 etc/glance/rootwrap.d/glance_cinder_store.filters %{buildroot}%{_datarootdir}/%{upstream_name}/glance_cinder_store.filters
 
+rm -rf %{buildroot}%{_prefix}/etc/glance
+
 %files -n python3-%{pkg_name}
 %doc AUTHORS ChangeLog
 %license LICENSE
