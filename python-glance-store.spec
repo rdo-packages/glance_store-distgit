@@ -4,7 +4,7 @@
 %global pkg_name glance-store
 
 Name:           python-glance-store
-Version:        2.0.0
+Version:        2.0.1
 Release:        1%{?dist}
 Summary:        OpenStack Image Service Store Library
 
@@ -70,6 +70,9 @@ install -p -D -m 644 etc/glance/rootwrap.d/glance_cinder_store.filters %{buildro
 %{python3_sitelib}/%{upstream_name}-*.egg-info
 
 %changelog
+* Mon Jul 26 2021 RDO <dev@lists.rdoproject.org> 2.0.1-1
+- Update to 2.0.1
+
 * Mon Apr 27 2020 RDO <dev@lists.rdoproject.org> 2.0.0-1
 - Update to 2.0.0
 
