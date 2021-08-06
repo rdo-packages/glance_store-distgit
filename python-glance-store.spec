@@ -89,3 +89,4 @@ rm -rf %{buildroot}%{_prefix}/etc/glance
 %{python3_sitelib}/%{upstream_name}-*.egg-info
 
 %changelog
+
