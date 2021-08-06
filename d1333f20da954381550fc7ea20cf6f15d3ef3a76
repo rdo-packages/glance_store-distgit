@@ -1,0 +1,9 @@
+Code-Review+2: Javier Peña <jpena@redhat.com>
+Code-Review+1: User marios <marios@redhat.com>
+Workflow+1: Yatin Karel <ykarel@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Fri, 06 Aug 2021 15:13:54 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/glance_store-distgit/+/34874
+Project: openstack/glance_store-distgit
+Branch: refs/heads/rpm-master
