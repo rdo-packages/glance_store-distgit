@@ -91,4 +91,3 @@ install -p -D -m 644 etc/glance/rootwrap.d/glance_cinder_store.filters %{buildro
 
 * Mon Sep 23 2019 RDO <dev@lists.rdoproject.org> 1.0.0-1
 - Update to 1.0.0
-
