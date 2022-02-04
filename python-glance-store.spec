@@ -1,13 +1,13 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0x01527a34f0d0080f8a5db8d6eb6c5df21b4b6363
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global upstream_name glance_store
 %global pkg_name glance-store
 
 Name:           python-glance-store
-Version:        2.3.0
-Release:        2%{?dist}
+Version:        2.3.1
+Release:        1%{?dist}
 Summary:        OpenStack Image Service Store Library
 
 License:        ASL 2.0
@@ -89,6 +89,9 @@ rm -rf %{buildroot}%{_prefix}/etc/glance
 %{python3_sitelib}/%{upstream_name}-*.egg-info
 
 %changelog
+* Fri Feb 04 2022 RDO <dev@lists.rdoproject.org> 2.3.1-1
+- Update to 2.3.1
+
 * Wed Oct 21 2020 Joel Capitao <jcapitao@redhat.com> 2.3.0-2
 - Enable sources tarball validation using GPG signature.
 
