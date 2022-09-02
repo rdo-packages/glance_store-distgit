@@ -42,7 +42,6 @@ Requires:       python3-cinderclient >= 4.1.0
 Requires:       python3-keystoneauth1 >= 3.4.0
 Requires:       python3-keystoneclient >= 1:3.8.0
 Requires:       python3-requests >= 2.14.2
-Requires:       python3-six >= 1.11.0
 Requires:       python3-stevedore >= 1.20.0
 Requires:       python3-oslo-concurrency >= 3.26.0
 Requires:       python3-oslo-config >= 2:5.2.0
