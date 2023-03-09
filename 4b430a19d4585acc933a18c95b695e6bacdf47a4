@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "4b430a19d4585acc933a18c95b695e6bacdf47a4",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d1968459_c9bbad9b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-03-09T11:29:34Z",
+      "side": 1,
+      "message": "missing python-oslo-rootwrap",
+      "revId": "4b430a19d4585acc933a18c95b695e6bacdf47a4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
