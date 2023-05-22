@@ -1,12 +1,12 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x01527a34f0d0080f8a5db8d6eb6c5df21b4b6363
+%global sources_gpg_sign 0x815AFEC729392386480E076DCC0DFE2D21C023C9
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global upstream_name glance_store
 %global pkg_name glance-store
 
 Name:           python-glance-store
-Version:        3.0.0
+Version:        3.0.1
 Release:        1%{?dist}
 Summary:        OpenStack Image Service Store Library
 
@@ -89,6 +89,9 @@ rm -rf %{buildroot}%{_prefix}/etc/glance
 %{python3_sitelib}/%{upstream_name}-*.egg-info
 
 %changelog
+* Mon May 22 2023 RDO <dev@lists.rdoproject.org> 3.0.1-1
+- Update to 3.0.1
+
 * Tue Mar 15 2022 RDO <dev@lists.rdoproject.org> 3.0.0-1
 - Update to 3.0.0
 
