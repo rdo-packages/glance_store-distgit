@@ -22,6 +22,30 @@
       },
       "revId": "7891eb6414cd302b5b5642614958b3b0421294b8",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec573345_0240d9b1",
+        "filename": "python-glance-store.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-06-29T14:06:38Z",
+      "side": 0,
+      "message": "I\u0027ll reuse that methodology in tooz",
+      "parentUuid": "b42c2b7e_aaf2b3d1",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 1
+      },
+      "revId": "7891eb6414cd302b5b5642614958b3b0421294b8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
