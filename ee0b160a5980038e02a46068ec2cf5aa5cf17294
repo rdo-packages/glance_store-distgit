@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e8a3990_314be7cd",
+        "filename": "python-glance-store.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-06-30T13:09:34Z",
+      "side": 1,
+      "message": "what about openstackdoctheme? this spec is quite special, because there is no build doc command, so no with_doc condition, so script would add here anything",
+      "revId": "ee0b160a5980038e02a46068ec2cf5aa5cf17294",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
