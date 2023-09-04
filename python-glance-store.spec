@@ -85,6 +85,9 @@ rm -rf %{buildroot}%{_prefix}/etc/glance
 %pyproject_extras_subpkg -n python3-%{pkg_name} cinder swift
 
 %check
+# CentOS CI environment is setting "http://cache.rdu2.centos.org:8080" which breaks the unit tests.
+unset http_proxy
+unset https_proxy
 %tox -e %{default_toxenv}
 
 %files -n python3-%{pkg_name}
