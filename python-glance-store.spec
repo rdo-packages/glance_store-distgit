@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0x815AFEC729392386480E076DCC0DFE2D21C023C9
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
@@ -8,8 +8,8 @@
 %global pkg_name glance-store
 
 Name:           python-glance-store
-Version:        XXX
-Release:        XXX
+Version:        4.6.1
+Release:        1%{?dist}
 Summary:        OpenStack Image Service Store Library
 
 License:        Apache-2.0
@@ -85,6 +85,9 @@ rm -rf %{buildroot}%{_prefix}/etc/glance
 %pyproject_extras_subpkg -n python3-%{pkg_name} cinder swift
 
 %check
+# CentOS CI environment is setting "http://cache.rdu2.centos.org:8080" which breaks the unit tests.
+unset http_proxy
+unset https_proxy
 %tox -e %{default_toxenv}
 
 %files -n python3-%{pkg_name}
@@ -98,4 +101,7 @@ rm -rf %{buildroot}%{_prefix}/etc/glance
 %{python3_sitelib}/%{upstream_name}*.dist-info
 
 %changelog
+* Mon Sep 04 2023 RDO <dev@lists.rdoproject.org> 4.6.1-1
+- Update to 4.6.1
+
 
