@@ -102,3 +102,4 @@ unset https_proxy
 
 %changelog
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/glance_store/commit/e9217809e76d60ea48d3853d9edd817ee077296f
