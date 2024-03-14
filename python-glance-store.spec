@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0x2ef3fe0ec2b075ab7458b5f8b702b20b13df2318
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
@@ -8,8 +8,8 @@
 %global pkg_name glance-store
 
 Name:           python-glance-store
-Version:        XXX
-Release:        XXX
+Version:        4.7.0
+Release:        1%{?dist}
 Summary:        OpenStack Image Service Store Library
 
 License:        Apache-2.0
@@ -101,4 +101,7 @@ unset https_proxy
 %{python3_sitelib}/%{upstream_name}*.dist-info
 
 %changelog
+* Thu Mar 14 2024 RDO <dev@lists.rdoproject.org> 4.7.0-1
+- Update to 4.7.0
+
 
