@@ -68,6 +68,24 @@
       "parentUuid": "3f3c2e9a_f28b3d5b",
       "revId": "0a2df23ddb4d2292be09abf2b6fab2add8a50c66",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "32cd5afa_176ea212",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-03-14T09:46:26Z",
+      "side": 1,
+      "message": "It\u0027s working in master b/c python3-suds-0.8.5-2.el9s.noarch provides it",
+      "parentUuid": "364272d1_d80f4f59",
+      "revId": "0a2df23ddb4d2292be09abf2b6fab2add8a50c66",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
