@@ -50,6 +50,24 @@
       "message": "- nothing provides python3.9dist(suds-community) \u003e\u003d 0.6 needed by python3-oslo-vmware",
       "revId": "0a2df23ddb4d2292be09abf2b6fab2add8a50c66",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "364272d1_d80f4f59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-03-14T09:44:09Z",
+      "side": 1,
+      "message": "latest python3-suds (i.e python3-suds-1.1.2-5.el9s.noarch) is not providing the python3.9dist(suds-community)",
+      "parentUuid": "3f3c2e9a_f28b3d5b",
+      "revId": "0a2df23ddb4d2292be09abf2b6fab2add8a50c66",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
