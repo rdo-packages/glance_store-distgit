@@ -6,7 +6,7 @@
 %global pkg_name glance-store
 
 Name:           python-glance-store
-Version:        4.3.2
+Version:        4.3.3
 Release:        1%{?dist}
 Summary:        OpenStack Image Service Store Library
 
@@ -88,6 +88,9 @@ rm -rf %{buildroot}%{_prefix}/etc/glance
 %{python3_sitelib}/%{upstream_name}-*.egg-info
 
 %changelog
+* Thu Mar 28 2024 RDO <dev@lists.rdoproject.org> 4.3.3-1
+- Update to 4.3.3
+
 * Fri Feb 16 2024 RDO <dev@lists.rdoproject.org> 4.3.2-1
 - Update to 4.3.2
 
