@@ -75,9 +75,6 @@ done
 %install
 %pyproject_install
 
-# Create a versioned binary for backwards compatibility until everything is pure py3
-ln -s ./glance-rootwrap %{buildroot}%{_bindir}/glance-rootwrap-3
-
 install -p -D -m 644 etc/glance/rootwrap.d/glance_cinder_store.filters %{buildroot}%{_datarootdir}/%{upstream_name}/glance_cinder_store.filters
 
 rm -rf %{buildroot}%{_prefix}/etc/glance
@@ -94,7 +91,6 @@ unset https_proxy
 %doc AUTHORS ChangeLog
 %license LICENSE
 %{_bindir}/glance-rootwrap
-%{_bindir}/glance-rootwrap-3
 %{_datarootdir}/%{upstream_name}
 %{_datarootdir}/%{upstream_name}/*.filters
 %{python3_sitelib}/%{upstream_name}
