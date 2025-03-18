@@ -8,8 +8,8 @@
 %global pkg_name glance-store
 
 Name:           python-glance-store
-Version:        XXX
-Release:        XXX
+Version:        4.9.1
+Release:        1%{?dist}
 Summary:        OpenStack Image Service Store Library
 
 License:        Apache-2.0
@@ -97,4 +97,7 @@ unset https_proxy
 %{python3_sitelib}/%{upstream_name}*.dist-info
 
 %changelog
+* Tue Mar 18 2025 RDO <dev@lists.rdoproject.org> 4.9.1-1
+- Update to 4.9.1
+
 
